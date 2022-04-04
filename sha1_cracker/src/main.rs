@@ -30,7 +30,7 @@ fn main() -> Result<(), Box<dyn Error>> {
         let line = line?;
         let common_password = line.trim();
 
-        if hash_to_crack == &hex::encode(sha1::Sha1::digest(common_password.as_bytes())) {
+        if hash_to_crack == hex::encode(sha1::Sha1::digest(common_password.as_bytes())) {
             println!("Password found: {}", &common_password);
             return Ok(());
         }
@@ -38,5 +38,5 @@ fn main() -> Result<(), Box<dyn Error>> {
 
     println!("Password not found in wordlist");
 
-    return Ok(());
+    Ok(())
 }
