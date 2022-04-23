@@ -31,7 +31,7 @@ fn main() -> Result<(), Box<dyn Error>> {
         let common_password = line.trim();
 
         if hash_to_crack == hex::encode(sha1::Sha1::digest(common_password.as_bytes())) {
-            println!("Password found: {}", &common_password);
+            println!("Password found: {common_password}");
             return Ok(());
         }
     }

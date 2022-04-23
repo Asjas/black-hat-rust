@@ -38,10 +38,10 @@ fn main() -> Result<(), anyhow::Error> {
             .collect();
 
         for subdomain in scan_result {
-            println!("{}:", &subdomain.domain);
+            println!("{subdomain.domain}:");
 
             for port in &subdomain.open_ports {
-                println!("{}", port.port);
+                println!("{port.port}");
             }
 
             println!("");
