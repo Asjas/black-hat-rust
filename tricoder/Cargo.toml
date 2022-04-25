@@ -5,7 +5,7 @@ edition = "2021"
 authors = ["A-J Roos <asjas@hey.com>"]
 
 [dependencies]
-thiserror = "1.0.0"
+thiserror = "1.0.30"
 anyhow = "1.0.56"
 rayon = "1.5.1"
 trust-dns-resolver = "0.21"
